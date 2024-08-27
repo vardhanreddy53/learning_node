@@ -25,7 +25,7 @@ let movies=[{
 },
 ];
 
-//get the movie list in the form of json
+//get the movie list 
 app.get('/movie',(req,res)=>{
     res.json(movies);
 });
@@ -36,7 +36,7 @@ app.post('/movie',(req,res)=>{
     movies.push(movie);
     res.send("Movie is added to the list");
 });
-//search for a movie
+//search for a movie by id
 app.get("/movie/:id",(req,res)=>{
     const id=req.params.id
     for(let movie of movies){
@@ -47,7 +47,7 @@ app.get("/movie/:id",(req,res)=>{
     }
     res.status(404).send("Movie Not Found")
 });
-//delete a movie
+//delete a movie by id 
 app.delete('/movie/:id',(req,res)=>{
     const id=req.params.id
     movies=movies.filter(movie=>{
