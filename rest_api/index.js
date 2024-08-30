@@ -8,6 +8,8 @@ app.use(express.urlencoded({extended:false}));
 let movies=[{
     id:'1',
     title:'Kalki2898Ad',
+
+     
     director:'Nag Ashwin',
     release_date:'2024-06-27'
 },
